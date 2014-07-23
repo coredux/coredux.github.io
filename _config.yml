@@ -2,9 +2,3 @@ markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title.html
 name: Coredux
-
-author: "Sean Ran"
-
-navigations:
-	- title: About
-	  href: /about.html

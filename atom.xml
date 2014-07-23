@@ -4,14 +4,14 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>San's world</title>
- <link href="http://hueidou.github.com/atom.xml" rel="self"/>
- <link href="http://hueidou.github.com/"/>
+ <title>Coredux</title>
+ <link href="http://coredux.github.com/atom.xml" rel="self"/>
+ <link href="http://coredux.github.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://hueidou.github.com/</id>
+ <id>http://coredux.github.com/</id>
  <author>
-   <name>hueidou163</name>
-   <email>hueidou163@gmail.com</email>
+   <name>Sean Ran</name>
+   <email>redpath000@gmail.com</email>
  </author>
 
  {% for post in site.posts %}
