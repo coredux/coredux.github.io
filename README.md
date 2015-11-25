@@ -7,6 +7,7 @@
 
 * _posts/
 * images/
+* about/
 * favicon.ico
 * CNAME
 
