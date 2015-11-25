@@ -3,41 +3,10 @@ layout: page
 title: About
 ---
 
-# 标题1
+# 博客简介
 
-## 标题2
+本博客用于记录分享自己日常开发的小心得体会以及一些其他想法，请不要在未经允许的情况下转载我的文章。
 
-### 标题3
+# 联系我
 
-#### 标题4
-
-##### 标题5
-
-###### 标题6
-
-# h1 h1 h1 h1
-
-## h2 h2 h2 h2
-
-### h3 h3 h3 h3 h3
-
-#### h4 h4 h4 h4 h4 h4
-
-##### h5 h5 h5 h5 h5 h5 h5
-
-###### h6 h6 h6 h6 h6 h6
-
-一段中文一段中文
-
-this is the content content content.
-
-
-{% highlight c linenos %}
-
-	#inlcude <stdio.h>
-	int main() {
-		printf("hello world");
-		return 0;
-	}
-
-{% endhighlight %}
+你可以通过电子邮件 sean.ran at outlook.com 联系我
