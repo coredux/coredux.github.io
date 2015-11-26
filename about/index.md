@@ -9,4 +9,4 @@ title: About
 
 # 联系我
 
-你可以通过电子邮件 sean.ran at outlook.com 联系我
+你可以通过电子邮件 sean.ran at seanran.me 联系我
