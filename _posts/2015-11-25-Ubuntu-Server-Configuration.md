@@ -3,7 +3,7 @@ title: ubuntu server Configuration
 layout: post
 ---
 
-
+#配置一个ubuntu server虚拟机
 
 我使用virtual box虚拟机，网络设置使用host-only 加 网络地址转换(NAT) 的方式
 

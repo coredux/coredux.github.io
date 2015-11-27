@@ -3,7 +3,7 @@ title: utserver Configuration
 layout: post
 ---
 
-
+#在ubuntu server下配置utorrent server
 
 首先下载ubuntu下的安装包 ut.tar.gz
 
