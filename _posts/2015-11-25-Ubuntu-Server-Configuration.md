@@ -4,3 +4,5 @@ layout: post
 ---
 
 #ubuntu server
+
+    sudo apt-get install openssh-server
