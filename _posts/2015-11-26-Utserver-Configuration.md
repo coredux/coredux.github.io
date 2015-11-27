@@ -3,35 +3,35 @@ title: utserver Configuration
 layout: post
 ---
 
-#utorrent server
+#åœ¨ubuntu serverä¸‹é…ç½®utorrent server
 
-Ê×ÏÈÏÂÔØubuntuÏÂµÄ°²×°°ü ut.tar.gz
+é¦–å…ˆä¸‹è½½ubuntuä¸‹çš„å®‰è£…åŒ… ut.tar.gz
 
-È»ºó½âÑ¹
+ç„¶åè§£å‹
 
     sudo tar -xvf ut.tar.gz
     
-¸ü¸ÄÄ¿Â¼È¨ÏŞ
+æ›´æ”¹ç›®å½•æƒé™
 
     sudo chmod 777 -R ut/
     
-ÒÆ¶¯µ½/opt
+ç§»åŠ¨åˆ°/opt
 
     sudo mv ut/ /opt/utorrent/
     
-Ìí¼Ó/utorrent/Ä¿Â¼ÏÂµÄutserverÈíÁ´½Óµ½/usr/bin/
+æ·»åŠ /utorrent/ç›®å½•ä¸‹çš„utserverè½¯é“¾æ¥åˆ°/usr/bin/
 
     sudo ln -s /opt/utorrent/utserver /usr/bin/utserver
     
-Æô¶¯
+å¯åŠ¨
 
     utserver -settingspath /opt/utorrent/ &
     
 
-È»ºóÊ¹ÓÃ youraddress:8080/gui/ ·ÃÎÊ,Ä¬ÈÏÃÜÂëÎª¿Õ
+ç„¶åä½¿ç”¨ youraddress:8080/gui/ è®¿é—®,é»˜è®¤å¯†ç ä¸ºç©º
 
-Ê¹ÓÃkillall utserverÀ´¹Ø±Õutorrent
+ä½¿ç”¨killall utserveræ¥å…³é—­utorrent
 
-Ä³Ğ©°æ±¾ÏÂ¿ÉÄÜĞèÒª°²×°°ülibssl0.9.8:i386
+æŸäº›ç‰ˆæœ¬ä¸‹å¯èƒ½éœ€è¦å®‰è£…åŒ…libssl0.9.8:i386
 
     sudo apt-get install libssl0.9.8:i386
