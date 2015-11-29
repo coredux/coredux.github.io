@@ -9,7 +9,7 @@ layout: post
 
 本文的许多内容是根据[Yii 2.0 权威指南](http://www.yiichina.com/guide)的内容结合自己的练习过程写成，本文档所有内容遵循[Yii 文档使用许可](http://www.yiiframework.com/doc/terms/)
 
-有关本笔记的任何问题或者指出错误，请联系
+有关本笔记的任何问题或者指出错误，请联系我
 
 
 ## 目的
