@@ -117,7 +117,7 @@ layout: post
 
 在虚拟机外，clone这个仓库。注意，8990是我设置的虚拟机的端口转发（将8990转发到SSH的端口22），git是我加入到gitgrp的用户，/home/sr/是我放置basic.git的路径，你应该根据你的情况变更相应的参数
 
-	sudo clone ssh://git@127.0.0.1:8990/home/sr/basic.git
+	sudo git clone ssh://git@127.0.0.1:8990/home/sr/basic.git
 
 在虚拟机内apache的DocumentRoot目录内的basic目录下（可以新建空目录），初始化git仓库
 
