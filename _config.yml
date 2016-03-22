@@ -3,3 +3,4 @@ pygments: true
 permalink: /:year/:month/:day/:title.html
 auto: true
 timezone: Asia/Chongqing
+markdown: kramdown
