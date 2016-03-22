@@ -23,11 +23,11 @@ $$\mathrm{dp}_{i,v} = \mathrm{max} \lbrace \mathrm{dp}_{i-1,v} , \mathrm{dp}_{i-
 
 假设下面是就是二维数组dp的一部分,
 
-　$a, b, \mathrm{dp}_{i-1,v},d,e$
-　$f,g,\mathrm{dp}_{i,v}\,\,\,\,\,,h,k$
+$a, b, \mathrm{dp}_{i-1,v},d,e$
+$f,g,\mathrm{dp}_{i,v}\,\,\,\,\,,h,k$
 
 我们可以发现：如果$\mathrm{dp}_{i,v}=\mathrm{dp}_{i-1,v}$ ,那么相当于直接复制$\mathrm{dp}_{i,v}$ 上面的元素$\mathrm{dp}_{i-1,v}$ 的值。而如果$\mathrm{dp}_{i,v}=\mathrm{dp}_{i-1,v-\mathrm{c}_i}+\mathrm{w}_i$ ，注意到，$v-\mathrm{c}_i \leq v $ ,所以, $\mathrm{dp}_{i,v}$ 的值是由上面一行对应位置以及左边的某一个元素加上$\mathrm{w}_i$ 得到，也就是说，我们每次想要更新$\mathrm{dp}_{i,v}$ 会用到的值只有上面一行对应位置以及左边的部分。
-　　
+
 所以，我们就能把二维数组压缩为一维数组，只需要每次从后往前更新$\mathrm{dp}_{i,v}$的值。这样就用$\mathrm{dp}_v$来表示容量为$v$的情况下，背包内物品的价值，状态转移方程也就成了：
 
 $$\mathrm{dp}_v = \mathrm{max}\lbrace \mathrm{dp}_v,\mathrm{dp}_{v-\mathrm{c}_i} + \mathrm{w}_i \rbrace$$
@@ -35,18 +35,19 @@ $$\mathrm{dp}_v = \mathrm{max}\lbrace \mathrm{dp}_v,\mathrm{dp}_{v-\mathrm{c}_i}
 # 完全背包
 
 对于完全背包，一件物品可以取多次，我们仍然使用0/1背包的思想:这件物品，取还是不取。唯一的变化是，取了这件物品，还可以取。所以，如果取，仍然是i件物品的问题($\mathrm{dp}_{i,v-\mathrm{c}_i}+\mathrm{w}_i $ );如果不取, $\mathrm{dp}_{i,v}$ 还是$\mathrm{dp}_{i-1,v}$ 都一样(第一次不取，以后也不会取，相当于转化成$i-1$ 件物品的问题，为了和取的情况保持一致，采用$\mathrm{dp}_{i,v}$ 。所以状态转移方程变为了
-　　
-　$$\mathrm{dp}_{i,v} = \mathrm{max}\lbrace \mathrm{dp}_{i,v},\mathrm{dp}_{i,v-\mathrm{c}_i} + \mathrm{w}_i \rbrace$$
-　
+
+$$\mathrm{dp}_{i,v} = \mathrm{max}\lbrace \mathrm{dp}_{i,v},\mathrm{dp}_{i,v-\mathrm{c}_i} + \mathrm{w}_i \rbrace$$
+
 那么在数组里，
 
-$a,b,m,\,\,\,\,\,\,d,e$
-$f,g,\mathrm{dp}_{i,v},h,k$
+$$a,b,m,\,\,\,\,\,\,d,e$$
+
+$$f,g,\mathrm{dp}_{i,v},h,k$$
 
 同样注意到，$v-\mathrm{c}_{i} \leq v$ 所以，每次更新 $\mathrm{dp}_{i,v}$ 可能用到的值是$\mathrm{dp}_{i,v}$ 以及它的左边的部分，所以也可以压缩为一维，这里要注意了，数组中的$f$、$g$，是$i$ 下的情况，并不是$i-1$ 的情况，$\mathrm{dp}_{i,v}$ 的值取决于$i$下，而不是$i-1$, 所以此时应该从前往后更新dp的值，这样才能保证取第i件物品时，$\mathrm{dp}_{i,v}$ 是由$\mathrm{dp}_{i,v-\mathrm{c}_i} + \mathrm{w}_i$ dp[i]推得，所以尽管状态转移方程仍然为
-　　
-　　$$\mathrm{dp}_{i,v} = \mathrm{max}\lbrace \mathrm{dp}_{i,v},\mathrm{dp}_{i,v-\mathrm{c}_i} + \mathrm{w}_i \rbrace$$
-　　
+
+$$\mathrm{dp}_{i,v} = \mathrm{max}\lbrace \mathrm{dp}_{i,v},\mathrm{dp}_{i,v-\mathrm{c}_i} + \mathrm{w}_i \rbrace$$
+
 $v$的循环顺序却应该是从小到大。
 
 基本上，这就是0/1背包和完全背包从二维转化为一维的思路，以后自己还要经常复习。
